@@ -41,6 +41,26 @@ Example for [lazy.nvim](https://github.com/folke/lazy.nvim)
 }
 ```
 
+Example for [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+```lua
+-- packer_init.lua
+    use { "lowitea/aw-watcher.nvim",
+      config = function()
+        require("aw_watcher").setup({
+            -- required, but can be empty table: {}
+            -- add any options here
+            -- for example:
+            aw_server = {
+                host = "127.0.0.1",
+                port = 5600,
+            },
+        })
+      end,
+    }
+
+```
+
 ## ⚙️ Configuration
 
 **aw-watcher.nvim** comes with the following defaults:
