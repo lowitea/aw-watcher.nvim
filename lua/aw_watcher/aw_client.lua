@@ -43,7 +43,7 @@ function Client.__post(self, url, data)
 
     local body = vim.fn.json_encode(data)
 
-    local args = { "POST", url, "-H", "Content-Type: application/json", "--data-raw", body }
+    local args = { "-X", "POST", url, "-H", "Content-Type: application/json", "--data-raw", body }
 
     local handle
     ---@diagnostic disable-next-line: missing-fields
